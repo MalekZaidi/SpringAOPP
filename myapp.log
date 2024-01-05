@@ -870,3 +870,6 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2024-01-05T12:00:35.606+01:00  INFO 11364 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-01-05T12:00:35.607+01:00  INFO 11364 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-01-05T12:00:36.607+01:00  INFO 11364 --- [http-nio-8083-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 554 ms
+2024-01-05T12:08:30.096+01:00  INFO 11364 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T12:08:30.133+01:00  INFO 11364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T12:08:30.176+01:00  INFO 11364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

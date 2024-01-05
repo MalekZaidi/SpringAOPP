@@ -23,7 +23,6 @@ private final IreservationRepository ireservationRepository;
 
     public Worker affectWorkerToReservation(String nic, List<Long> idReservations) {
         Optional<Worker> optionalWorker = Optional.ofNullable(iworkerRepository.findByNic(nic));
-
         if (optionalWorker.isPresent()) {
             Worker worker = optionalWorker.get();
             if (worker.getReservations().size() + idReservations.size() <= 5) {
@@ -45,9 +44,3 @@ private final IreservationRepository ireservationRepository;
         }
     }
 }
-/*
-
-ajouter une vehicule, une reservation en precisant une liste de service de lavage, en associant
-un vehicule a cette reservation, et definir le statut du reservtation comme pending en respectuant la signature suivante:
-public Vehicule addVehiculeReservationAndAffectToWashingService(Vehicule vehicule, List<Long> idService)
- */
