@@ -1,7 +1,5 @@
 package com.example.examen_malek_zaidi.entities;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -15,18 +13,16 @@ import java.util.Set;
 @Getter
 @RequiredArgsConstructor
 @ToString
-public class Bank {
-
+public class WashingService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idService;
+    private float price;
+    @Enumerated(EnumType.STRING)
+    private Type type;
 
-    private long idBank;
 
-    private String nom;
-    private String agence;
-    private String adresse;
-    @JsonIgnore
-    @OneToMany
-    private Set<Compte> comptes;
+   @ManyToMany(mappedBy = "washingServices")
+    private Set<Reservation> reservations;
 
 }

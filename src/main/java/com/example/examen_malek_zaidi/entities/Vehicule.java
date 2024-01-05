@@ -6,18 +6,20 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Set;
+
 @Entity
 @Setter
 @Getter
 @RequiredArgsConstructor
 @ToString
-public class Compte {
+public class Vehicule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idCompte;
-    @Enumerated(EnumType.STRING)
-    private TypeCompte type;
-    private long code;
-    private double solde;
+    private long idVehicule;
+    private String brand;
+    private String immatriculation;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    Set<Reservation> reservations;
 
 }

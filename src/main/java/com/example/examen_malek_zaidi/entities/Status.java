@@ -1,5 +1,5 @@
 package com.example.examen_malek_zaidi.entities;
 
-public enum TypeCompte {
-    COURANT,EPARGNE
+public enum Status {
+    PENDING,CONFIRMED,CANCELED
 }

@@ -13,12 +13,14 @@ import java.time.LocalDateTime;
 @Aspect
 @Component
 public class LoggingAspect {
-/*
-    @AfterReturning(pointcut = "execution(* com.example.examen_malek_zaidi.services.*.ajouter*(..))", returning = "result")
+
+    @AfterReturning(pointcut = "execution(* com.example.examen_malek_zaidi.services.VehiculeService.addVehiculeReservationAndAffectToWashingService*(..))", returning = "result")
     public void logAjouterMethodSuccess(JoinPoint joinPoint, Object result) {
         String methodName = joinPoint.getSignature().getName();
-        log.info("Method '{}' executed successfully. C’est une méthode d’ajout.", methodName);
+        log.info("Method '{}' Waiting for a Worker.", methodName);
     }
+/*
+
 
     @AfterReturning(pointcut = "execution(* com.example.examen_malek_zaidi.services.*.affecter*(..))", returning = "result")
     public void logAffecterMethodSuccess(JoinPoint joinPoint, Object result) {
@@ -32,7 +34,7 @@ public class LoggingAspect {
         LocalDateTime currentTime = LocalDateTime.now();
 
         System.out.println("Method '" + methodName + "' of class '" + className + "' called at: " + currentTime);
-    }
+    }a
 
     @Around("execution(* com.example.service..*(java.lang.String))")
     public Object logServiceMethod(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -40,7 +42,9 @@ public class LoggingAspect {
         Object result = joinPoint.proceed();
         return result;
     }
+    https://github.com/MalekZaidi/SpringAOPP
     */
+
 }
 /*
     Toutes les secondes :
